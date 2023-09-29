@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* reusable code */
+.flex {
+    display: flex;
+}
+
+.space-bet {
+    justify-content: space-between;
+}
+
+
+.b {
+    border: 1px solid red;
+}
+body{
+    width: 100vw;
+    height: 2000px;
+}
+.nav-container {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    height: 110px;
+    width: 100%;
+    color: white;
+}
+/* header left section */
+.left {
+    width: 24%;
+    display: flex;
+    gap: 7px;
+    font-weight: bolder;
+}
+
+.logo img {
+    width: 150px;
+}
+.left span{
+    margin-left: 20px;
+}
+.header-loc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header mid section */
+.mid {
+    width: 47%;
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    display: flex;
+    
+}
+.mid input{
+   width: 80%;
+   color: black;
+}
+.mid button{
+    background-color: orange;
+    border: 0;
+    outline: none;
+}
+.mid input,.mid button{
+    padding: 15px 20px;
+    border-radius: 2px;
+}
+
+/* header right section */
+.right {
+display: flex;
+    width: 29%;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* banner section */
+.banner{
+    width: 100%;
+    height: 330px;
+    border: 1px solid red;
+    background-size: cover;
+     
+   animation-name: banner;
+   animation-duration: 15s;
+   animation-iteration-count: infinite;
+   
+   animation-timing-function: ease-in;
+   background-repeat: no-repeat;
+   
+}
+@keyframes banner{
+0%{
+background-image: url(heroImg/hero2.jpg);
+}10%{
+    
+    background-image: url(heroImg/hero3.jpg);
+}
+20%{
+    
+    background-image: url(heroImg/rakhi-hero-pca-pc-2X._CB598665822_.jpg);
+}
+30%{
+    background-image: url(heroImg/hero4.jpg);
+    
+}40%{
+    background-image: url(heroImg/hero5.jpg);
+
+}
+50%{
+    background-image: url(heroImg/rakhi-hero-pca-pc-2X._CB598665822_.jpg);
+}60%{
+    ackground-image: url(heroImg/hero2.jpg);
+}
+70%{
+    ackground-image: url(heroImg/hero3.jpg);
+}80%{
+    ackground-image: url(heroImg/hero4.jpg);
+}
+90%{
+    ackground-image: url(heroImg/hero5.jpg);
+}100%{
+background-image: url(heroImg/rakhi-hero-pca-pc-2X._CB598665822_.jpg);
+}
+}
+
+/* filter section */
+#filter-btn-container button{
+    background: none;
+    border: 0;
+    outline: none;
+    width: 14%;
+    cursor: pointer;
+    }
+    
+    #filter-btn-container{
+        display: flex;
+        margin-top: 30px;
+        margin-bottom:30px ;
+        justify-content: space-around;
+        
+        
+    }
+    #filter-btn-container label{
+        font-size: 20px;
+      background-color: black;
+      color: white;
+      padding: 20px;
+        
+    }
+
+    /* product item style */
+    #products{
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    #products .product-item{
+         margin: 30px auto;
+         width: 16%;   
+         
+     
+        
+    }
+    .product-item img{
+        height: 100px;
+
+    }
+
+   
+   .hide{
+    display: none;
+   } 

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "amazon clone",
+			"path": "."
+		},
+		{
+			"name": "heroImg",
+			"path": "../../../Amazon Clone/heroImg"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "amazon clone"
+	}
+}
