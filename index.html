@@ -21,11 +21,15 @@
          </div>
       </div>
       <div class="mid ">
-
-         <input type="search" id="mySearchField" class="search" placeholder="Search your items">
-         <button id="Search" onclick=""><img src="icon/search-icon.png" alt=""></button>
-
-      </div>
+         <div class="search-container">
+             <input type="search" id="mySearchField" class="search" placeholder="Search your items" onkeyup="search()">
+             <button id="Search" onclick="">Search</button>
+             <div id="suggestions" class="suggestions"></div>
+         </div>
+     </div>
+     
+     
+     
       <div class="right ">
          <div>
             <h4> Hello, Sign in</h4>

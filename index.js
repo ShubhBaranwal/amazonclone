@@ -81,6 +81,39 @@ let categoryFilter=()=>{
 //}
 
 
+let search = async () => {
+    let mySearchField = document.getElementById('mySearchField');
+    let searchString = mySearchField.value.toLowerCase();
+    let suggestionsDiv = document.getElementById('suggestions');
+
+    if (searchString.length === 0) {
+        suggestionsDiv.innerHTML = '';
+        return;
+    }
+    
+    let product = await fetch('https://fakestoreapi.com/products');
+    let finalproduct = await product.json();
+
+    let filteredItems = finalproduct.filter((data) => {
+        return (
+            data.title.toLowerCase().includes(searchString) ||
+            data.category.toLowerCase().includes(searchString)
+        );
+    });
+    if (filteredItems.length > 0) {
+        suggestionsDiv.style.display = 'block';
+    } else {
+        suggestionsDiv.style.display = 'none';
+    }
+    suggestionsDiv.innerHTML = '';
+    filteredItems.forEach((item) => {
+        suggestionsDiv.innerHTML += `
+            <div class="suggestion-item">
+                <p>${item.title}</p>
+            </div>
+        `;
+    });
+};
 
 
 
